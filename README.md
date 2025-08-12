@@ -43,7 +43,7 @@ This project combines:
 
 ## 🗂 Project Structure
 
-```
+
 
 adversarial\_defense/
 │── backend/
@@ -60,49 +60,47 @@ adversarial\_defense/
 │
 └── README.md
 
-````
 
----
 
 ## ⚙️ Installation & Setup
 
 ### 1️⃣ Clone the repository
-```bash
+bash
 git clone https://github.com/YOUR_USERNAME/adversarial-defense-dashboard.git
 cd adversarial-defense-dashboard
-````
 
-### 2️⃣ Create a virtual environment
 
-```bash
+ 2️⃣ Create a virtual environment
+
+bash
 python -m venv venv
 source venv/bin/activate   # Mac/Linux
 venv\Scripts\activate      # Windows
-```
 
-### 3️⃣ Install dependencies
 
-```bash
+ 3️⃣ Install dependencies
+
+bash
 pip install -r requirements.txt
-```
+
 
 **Example `requirements.txt`:**
 
-```
+
 fastapi
 uvicorn
 torch
 torchvision
 numpy
 pillow
-```
+
 
 ### 4️⃣ Run the backend
 
-```bash
+bash
 cd backend
 uvicorn main:app --reload
-```
+
 
 Backend will start at: **[http://127.0.0.1:8000](http://127.0.0.1:8000)**
 
@@ -126,22 +124,20 @@ The UI will connect to the backend APIs automatically (make sure ports match).
 
 ## 🧪 Example API Request (Training Model)
 
-```bash
+bash
 curl -X POST "http://127.0.0.1:8000/train" \
 -H "Content-Type: application/json" \
 -d '{"dataset": "MNIST", "epochs": 2, "lr": 0.001}'
-```
+
 
 **Response:**
 
-```json
+json
 {
   "status": "success",
   "clean_accuracy": 92.3
 }
-```
 
----
 
 ## 🎯 Roadmap
 
@@ -164,10 +160,3 @@ This project is licensed under the MIT License.
 * [FastAPI](https://fastapi.tiangolo.com/)
 * [Adversarial Robustness Toolbox](https://github.com/Trusted-AI/adversarial-robustness-toolbox)
 
-```
-
----
-
-If you want, I can also **write the `attacks.py` and `defenses.py`** so that your GitHub project is **fully functional** instead of just placeholder APIs.  
-Do you want me to prepare that as well so the README matches the real functionality?
-```
